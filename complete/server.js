@@ -14,5 +14,5 @@ app.delete('/doc/:id', handlers.delete);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
-  console.log('Application listening on ', port);
+    console.log('Application listening on ', port);
 });

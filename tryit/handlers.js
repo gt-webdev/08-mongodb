@@ -13,34 +13,33 @@ var uriString = 'mongodb://' + dbuser + ':' + dbpassword + '@' + dburl + '/' + d
 var c;
 var db;
 MongoClient.connect(uriString, function (err, database) {
-  if (err) {
-    console.log(err);
-  }
-  console.log("Connected correctly to mogno");
-  db = database
-  c = db.collection(collectionName);
+    if (err) {
+        console.log(err);
+    }
+    console.log("Connected correctly to mongo");
+    db = database
+    c = db.collection(collectionName);
 });
 
 var handlers = {
-  write: function(req, res) {
+    write: function(req, res) {
+    },
 
-  },
+    read: function(req, res) {
 
-  read: function(req, res) {
+    },
 
-  },
+    readOne: function(req, res) {
 
-  readOne: function(req, res) {
+    },
 
-  },
+    update: function(req, res) {
 
-  update: function(req, res) {
+    },
 
-  },
+    delete: function(req, res) {
 
-  delete: function(req, res) {
-
-  }
+    }
 }
 
 module.exports = handlers

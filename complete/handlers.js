@@ -12,12 +12,12 @@ var uriString = 'mongodb://' + dbuser + ':' + dbpassword + '@' + dburl + '/' + d
 
 var c;
 var db;
-MongoClient.connect(uriString, function (err, database) {
+MongoClient.connect(uriString, function (err, client) {
     if (err) {
         console.log(err);
     }
     console.log("Connected correctly to mongo");
-    db = database
+    db = client.db(dbname);
     c = db.collection(collectionName);
 });
 
